@@ -1,0 +1,59 @@
+<% layout('layouts/boilerplate') -%>
+<div class="row">
+  <h1 class="text-center">New Stadium</h1>
+  <div class="col-6 offset-3">
+    <form action="/stadiums" method="POST">
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          id="title"
+          name="stadium[title]"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="stadium[location]"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">Image url</label>
+        <input
+          class="form-control"
+          type="text"
+          id="image"
+          name="stadium[image]"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="capacity">Capacity</label>
+        <input
+          class="form-control"
+          type="text"
+          id="capacity"
+          name="stadium[capacity]"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Description</span>
+        <textarea
+          class="form-control"
+          aria-label="With textarea"
+          id="description"
+          name="stadium[description]"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">add new stadium</button>
+      </div>
+    </form>
+    <div>
+      <a href="/stadiums">All Stadiums</a>
+    </div>
+  </div>
+</div>
