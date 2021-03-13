@@ -22,12 +22,14 @@ db.catch((err) => {
 const stadDB = async () => {
   await Stadium.deleteMany({});
   for (var i = 0; i < 10; i++) {
-    const random10 = Math.floor(Math.random() * 10);
+    // const random10 = Math.floor(Math.random() * 10);
+    // console.log(cities[i].title);
     const stad = new stadiums({
-      title: `${cities[random10].title}`,
-      description: `${cities[random10].description}`,
-      capacity: `${cities[random10].capacity}`,
-      location: `${cities[random10].city}, ${cities[random10].country}`,
+      title: `${cities[i].title}`,
+      image: `${cities[i].image}`,
+      description: `${cities[i].description}`,
+      capacity: `${cities[i].capacity}`,
+      location: `${cities[i].city}, ${cities[i].country}`,
     });
     await stad.save();
   }

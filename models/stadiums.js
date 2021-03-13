@@ -4,8 +4,9 @@ const Schema = mongoose.Schema; // defining a model
 
 const StadiumSchema = new Schema({
   title: String,
+  image: String,
   description: String,
-  capacity: String,
+  capacity: Number,
   location: String
 });
 
