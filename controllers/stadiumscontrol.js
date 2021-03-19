@@ -18,7 +18,7 @@ module.exports.createStadium = async (req, res, next) => {
   }));
   stadium.author = req.user._id;
   await stadium.save();
-  console.log(stadium);
+  // console.log(stadium);
   req.flash("success", "successfully created a new stadium!!");
   return res.redirect(`/stadiums/${stadium.id}`);
 };
