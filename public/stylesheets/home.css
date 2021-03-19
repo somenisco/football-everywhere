@@ -1,0 +1,18 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url("../assets/homepage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cover-container{
+    max-width: 60vw;
+}
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.nav-link{
+    font-weight: 700;
+}
