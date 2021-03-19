@@ -203,6 +203,8 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error1", { err });
 });
 
-app.listen(3000, () => {
-  console.log("server 3000 connected");
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`server ${port} connected`);
 });
