@@ -1,2 +1,69 @@
-<% layout('layouts/boilerplate') -%>
-<h1>welcome to home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/59ef493f57.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>HomePage-StaDium</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+  </head>
+  <body class="text-center text-white" style="font-family: bignoodletitling;">
+    <div class="cover-container d-flex h-100 w-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">StaDium<i class="fas fa-futbol"></i></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" style="margin-left: auto">
+                <a class="nav-link" aria-current="page" href="/stadiums"
+                  >All Stadiums</a
+                >
+                <% if(!currentUser){ %>
+                <a class="nav-link" href="/login"
+                  >Login <i class="fas fa-sign-in-alt"></i
+                ></a>
+                <a class="nav-link" href="/register"
+                  >SignUp <i class="fas fa-user-plus"></i
+                ></a>
+                <% } else { %>
+                <a class="nav-link" href="/logout"
+                  >LogOut <i class="fas fa-sign-out-alt"></i
+                ></a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- <h1 class="mb-3">Welcome to Home Page</h1> -->
+      <footer class="mt-auto text-white-50">
+        <p>&copy; 2020</p>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

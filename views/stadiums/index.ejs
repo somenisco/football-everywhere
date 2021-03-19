@@ -1,18 +1,14 @@
 <% layout('layouts/boilerplate') -%>
-<h1>ALL STADIUMS</h1>
-<div>
-  <a href="/stadiums/new">ADD NEW STADIUM</a>
-</div>
 
 <% for (let stadium of stadiums) {%>
-<div class="card mb-3">
+<div class="card mb-4 shadow">
   <div class="row">
-    <div class="col-md-4">
-      <img class="img-fluid" src="<%= stadium.image %>" alt="" />
+    <div class="col-xl-4 col-lg-6 col-sm-12">
+      <img class="img-fluid" src="<%= stadium.images[0].url %>" alt=""/>
     </div>
-    <div class="col-md-8">
+    <div class="col-xl-8 col-lg-6 col-sm-12">
       <div class="card-body">
-        <h5 class="card-title"><%= stadium.title %></h5>
+        <h5 class="card-title"><a href="/stadiums/<%=stadium.id%>"><%= stadium.title %></a></a></h5>
         <p class="card-text">
           <%= stadium.description %>
         </p>
@@ -21,7 +17,7 @@
             <%= stadium.location %>
           </small>
         </p>
-        <a href="/stadiums/<%= stadium.id %>" class="btn btn-primary"><%= stadium.title %></a>
+        <!-- <a href="/stadiums/<%= stadium.id %>" class="btn btn-primary"><%= stadium.title %></a> -->
       </div>
     </div>
   </div>

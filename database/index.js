@@ -25,8 +25,20 @@ const stadDB = async () => {
     // const random10 = Math.floor(Math.random() * 10);
     // console.log(cities[i].title);
     const stad = new stadiums({
+      author: "6050bbb3d1c7b83db428f134",
       title: `${cities[i].title}`,
-      image: `${cities[i].image}`,
+      images: [
+        {
+          url:
+            "https://res.cloudinary.com/fancy/image/upload/v1615999753/Stadiums/dohaaumn5u7u8wmkxf0g.jpg",
+          filename: "Stadiums/dohaaumn5u7u8wmkxf0g",
+        },
+        {
+          url:
+            "https://res.cloudinary.com/fancy/image/upload/v1615999761/Stadiums/utwxv5yrxr0o06bvc4vo.jpg",
+          filename: "Stadiums/utwxv5yrxr0o06bvc4vo",
+        },
+      ],
       description: `${cities[i].description}`,
       capacity: `${cities[i].capacity}`,
       location: `${cities[i].city}, ${cities[i].country}`,
