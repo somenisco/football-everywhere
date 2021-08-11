@@ -2,4 +2,4 @@
 
 to run server
 
-->npm run serve
+->npm start
